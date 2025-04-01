@@ -1,0 +1,192 @@
+/* =======================
+    RESET BÁSICO
+======================= */
+/* O objetivo do reset é garantir que todos os navegadores exibam os elementos da mesma forma */
+* {
+    margin: 0; /* Remove a margem de todos os elementos */
+    padding: 0; /* Remove o preenchimento (padding) de todos os elementos */
+    box-sizing: border-box; /* Faz com que o padding e a borda não afetem o tamanho dos elementos */
+    font-family: Arial, sans-serif; /* Define a fonte padrão do site */
+}
+
+/* =======================
+    ESTILIZAÇÃO GERAL DO BODY
+======================= */
+/* Aqui estamos definindo o estilo global do corpo da página */
+body {
+    background-color: #fafafa; /* Cor de fundo clara para o corpo da página */
+    display: flex; /* Utiliza flexbox para organizar os elementos */
+    flex-direction: column; /* Os elementos serão organizados em coluna */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
+    padding: 20px; /* Adiciona um preenchimento de 20px em torno da página */
+}
+
+/* =======================
+    ESTILIZAÇÃO DO TÍTULO
+======================= */
+/* Estiliza o título geral da página */
+h1 {
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o título em negrito */
+    color: #E60023; /* Cor vermelha (como o Pinterest) */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* =======================
+    BARRA DE NAVEGAÇÃO
+======================= */
+/* Aqui estilizamos a barra de navegação que fica no topo */
+nav {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 15px 30px; /* Espaço interno da barra (15px acima e abaixo, 30px nas laterais) */
+    width: 100%; /* A barra ocupa a largura total da tela */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave embaixo da barra para dar destaque */
+    display: flex; /* Utiliza flexbox para organizar os links */
+    justify-content: space-between; /* Coloca os links nas extremidades da barra */
+    align-items: center; /* Alinha os links no centro verticalmente */
+    position: sticky; /* Faz com que a barra fique fixa no topo ao rolar a página */
+    top: 0; /* Fixa a barra no topo */
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+}
+
+/* =======================
+    LINKS DE NAVEGAÇÃO
+======================= */
+/* Estiliza os links dentro da barra de navegação */
+nav a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #333; /* Cor do texto (cinza escuro) */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 8px 20px; /* Adiciona espaço dentro dos links */
+    border-radius: 5px; /* Bordas arredondadas nos links */
+    transition: 0.3s; /* Transição suave ao passar o mouse */
+}
+
+/* =======================
+    EFEITO DE HOVER NOS LINKS
+======================= */
+/* O que acontece quando o mouse passa sobre os links */
+nav a:hover {
+    background-color: #E60023; /* Muda a cor do fundo para vermelho */
+    color: white; /* Muda a cor do texto para branco */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do link */
+}
+
+/* =======================
+    LINK ATIVO (SE ESTIVER NO FEED OU PERFIL)
+======================= */
+/* Estilo para o link ativo (o link que está sendo visualizado, por exemplo, o Feed ou Perfil) */
+nav a.active {
+    background-color: #E60023; /* Cor vermelha de fundo */
+    color: white; /* Texto branco */
+}
+
+/* =======================
+    RESPONSIVIDADE PARA TELAS PEQUENAS
+======================= */
+/* Quando a tela for menor que 768px (telas de celulares ou tablets) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Alinha os links na vertical */
+        align-items: flex-start; /* Alinha os links à esquerda */
+    }
+
+    nav a {
+        margin: 10px 0; /* Adiciona espaço entre os links */
+        padding: 10px; /* Adiciona mais espaço dentro dos links */
+        width: 100%; /* Faz os links ocuparem toda a largura da tela */
+        text-align: center; /* Centraliza o texto nos links */
+    }
+}
+
+/* =======================
+    ESTILIZAÇÃO DO FORMULÁRIO (UPLOAD DE FOTO NO PERFIL)
+======================= */
+/* Estiliza o formulário do perfil (onde o usuário faz upload de fotos) */
+form {
+    background: white; /* Cor de fundo branca */
+    padding: 15px; /* Espaço interno do formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o formulário */
+    display: flex; /* Organiza os itens dentro do formulário */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 20px; /* Espaço abaixo do formulário */
+}
+
+/* =======================
+    ESTILIZAÇÃO DO BOTÃO DE UPLOAD
+======================= */
+/* Estilo para o botão de upload de imagem */
+input[type="file"] {
+    margin: 10px 0; /* Espaço acima e abaixo do campo de upload */
+}
+
+button {
+    background: #E60023; /* Cor vermelha do botão */
+    color: white; /* Texto branco */
+    padding: 10px; /* Espaço dentro do botão */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Altera o cursor para mostrar que é clicável */
+    transition: 0.3s; /* Transição suave quando interagir com o botão */
+}
+
+/* =======================
+    EFEITO DE HOVER NO BOTÃO
+======================= */
+/* O que acontece quando o mouse passa sobre o botão */
+button:hover {
+    background: #cc001f; /* Muda o fundo para um vermelho mais escuro */
+}
+
+/* =======================
+    ESTILIZAÇÃO DO PERFIL DO USUÁRIO
+======================= */
+/* Estilo para a área do perfil do usuário */
+.perfil-container {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo da área do perfil */
+}
+
+.perfil-container h1 {
+    font-size: 24px; /* Tamanho do título */
+    color: #333; /* Cor do título (cinza escuro) */
+}
+
+/* =======================
+    GRADE DE IMAGENS (FEED E PERFIL)
+======================= */
+/* Organiza as imagens em uma grade responsiva */
+.feed-container {
+    display: grid; /* Utiliza grid para organizar as imagens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas de tamanho flexível */
+    gap: 15px; /* Espaço entre as imagens */
+    width: 90%; /* Largura das imagens */
+    max-width: 1200px; /* Largura máxima */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+/* =======================
+    ESTILIZAÇÃO DAS IMAGENS
+======================= */
+/* Estiliza as imagens dentro do feed ou perfil */
+.feed-container img {
+    width: 100%; /* Faz as imagens ocuparem toda a largura disponível */
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da imagem */
+}
+
+/* =======================
+    EFEITO DE HOVER NAS IMAGENS
+======================= */
+/* O que acontece quando o mouse passa sobre a imagem */
+.feed-container img:hover {
+    transform: scale(1.05); /* Aumenta a imagem um pouco */
+}
+
+

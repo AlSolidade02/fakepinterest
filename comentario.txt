@@ -1,0 +1,3 @@
+<!--Aqui estamos extendendo todas as propriedades da pagina Homepage, porem deixando dinamico com a a pagina Perfil-->
+<!--as {{}} permite que passe variavel python python junto com html-->
+<!--o url_for permite que navegue entre as paginas pelo nome da função -->

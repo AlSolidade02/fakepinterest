@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}
+        FakePinterest
+        {% endblock %}</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        
+</head>
+
+{% block body %}
+<body>
+    <h1 class="title">FakePinterest - Meu primeiro Site em Python</h1></br>
+    
+
+
+    {% block formulario %}
+    <form method="POST">
+
+        {{form.csrf_token}}
+
+        {{form.email.label() }}
+        {{form.email() }}
+
+        {{form.senha.label()}}
+        {{form.senha()}}
+
+        {{form.botao_confirmacao()}}
+
+    </form>
+
+    <a href="{{url_for('criarconta')}}">Crie aqui sua conta</a>
+    {% endblock %}
+    
+</body>
+{% endblock %}
+</html>
+<!--bloco de edição dinamico python-->
